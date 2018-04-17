@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
  * @author gz
  *
  */
-public @interface Before {
+public @interface BeforeExecute {
 
 	public Class<? extends CustomInterceptor>[] value();
 	
