@@ -7,22 +7,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author gz
- * 自定义验证方法构造器，单例模式构造所有继承CustomConstraintValidator接口的类实例
+ * @author gz 自定义验证方法构造器，单例模式构造所有继承CustomConstraintValidator接口的类实例
  */
 public enum CustomConstraintValidatorBuilder {
 
-INSTANCE;
-	
+	INSTANCE;
+
 	private Map<Class<CustomConstraintValidator<?>>, CustomConstraintValidator<?>> validators;
-	
-	CustomConstraintValidatorBuilder(){
+
+	CustomConstraintValidatorBuilder() {
 		validators = new HashMap<Class<CustomConstraintValidator<?>>, CustomConstraintValidator<?>>();
 	}
-	
-	public CustomConstraintValidator<?> GetValidator(Class<CustomConstraintValidator<?>> c){
+
+	public CustomConstraintValidator<?> GetValidator(Class<CustomConstraintValidator<?>> c) {
 		CustomConstraintValidator<?> result = validators.get(c);
-		if(result == null) {
+		if (result == null) {
 			try {
 				result = c.newInstance();
 				validators.put(c, result);
@@ -36,5 +35,5 @@ INSTANCE;
 		}
 		return result;
 	}
-	
+
 }

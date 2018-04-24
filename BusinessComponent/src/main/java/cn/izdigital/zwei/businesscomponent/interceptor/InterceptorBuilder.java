@@ -18,7 +18,6 @@ public enum InterceptorBuilder {
 		for (CustomInterceptor item : allCustomInterceptors.values()) {
 			interceptors.put((Class<CustomInterceptor>)item.getClass(), item);
 		}
-		System.out.println("InterceptorBuilder.init");
 	}
 	
 	public void init() {}
