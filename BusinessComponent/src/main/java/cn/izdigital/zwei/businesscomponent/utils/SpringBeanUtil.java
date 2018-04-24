@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,15 +14,14 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class SpringBeanUtil implements ApplicationContextAware {
+public class SpringBeanUtil {
 
 	private static ApplicationContext ctx = null;
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.context.ApplicationContextAware#setApplicationContext(org.springframework.context.ApplicationContext)
 	 */
-	@Override
-	public void setApplicationContext(ApplicationContext ctx) throws BeansException {
+	public static void setApplicationContext(ApplicationContext ctx) throws BeansException {
 		// TODO Auto-generated method stub
 		SpringBeanUtil.ctx = ctx;
 	}
@@ -39,6 +37,7 @@ public class SpringBeanUtil implements ApplicationContextAware {
 	}
 	
 	public static <T> Map<String, T> getBeansOfType(Class<T> c){
+		System.out.println(ctx);
 		return ctx.getBeansOfType(c);
 	}
 
