@@ -3,6 +3,7 @@
  */
 package cn.izdigital.zwei.web.controller;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,7 @@ import cn.izdigital.zwei.web.filter.LoginFilter;
  *
  */
 @Controller
+@Component
 public class ChannelController extends ZweiController {
 	
 	@BeforeExecute(LoginFilter.class)
