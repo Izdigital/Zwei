@@ -13,13 +13,13 @@ import javax.validation.ConstraintValidatorContext;
  * @author gz
  *
  */
-public class CustomValidatorProcess implements ConstraintValidator<CustomConstraint, Object> {
+public class CustomValidatorProcess implements ConstraintValidator<CustomValidatorActivation, Object> {
 
 	/* (non-Javadoc)
 	 * @see javax.validation.ConstraintValidator#initialize(java.lang.annotation.Annotation)
 	 */
 	@Override
-	public void initialize(CustomConstraint constraintAnnotation) {
+	public void initialize(CustomValidatorActivation constraintAnnotation) {
 		// TODO Auto-generated method stub
 		
 	}

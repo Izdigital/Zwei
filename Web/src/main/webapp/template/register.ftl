@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<#assign base=request.contextPath />
 <head>
 	<title>注册</title>
 	<#import "spring.ftl" as spring />  
@@ -43,7 +44,8 @@
         </div>
     </div>
 </form>
-<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="${base}/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="${base}/js/jquery.validate.js"></script>
+<@valid className="cn.izdigital.zwei.web.viewmodel.RegisterEditModel" formName="register"> </@valid>
 </body>
 </html>

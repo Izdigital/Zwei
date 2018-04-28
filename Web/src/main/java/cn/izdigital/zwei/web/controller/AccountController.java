@@ -10,6 +10,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.izdigital.zwei.web.viewmodel.RegisterEditModel;
 
@@ -32,6 +33,15 @@ public class AccountController {
 			return "register";
 		}
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value = "/validUserName", method = RequestMethod.POST)
+	@ResponseBody
+	public Object validUserName(String userName) {
+		if(userName.equals("guanzhen")) {
+			return false;
+		}
+		return true;
 	}
 	
 }

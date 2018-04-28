@@ -9,11 +9,14 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import cn.izdigital.zwei.businesscomponent.validate.Compare;
+import cn.izdigital.zwei.businesscomponent.validate.CustomValidatorActivation;
+import cn.izdigital.zwei.businesscomponent.validate.Remote;
 
 /**
  * @author gz
  *
  */
+@CustomValidatorActivation
 public class RegisterEditModel {
 
 	/**
@@ -21,6 +24,7 @@ public class RegisterEditModel {
 	 */
 	@NotEmpty(message = "不能为空")
 	@Size(min = 6, max = 15, message = "请输入长度在{min}到{max}之间的字符串")
+	@Remote(validatrUrl = "/account/validUserName", message = "该用户名已被注册")
 	private String userName;
 
 	/**

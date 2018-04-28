@@ -13,23 +13,18 @@ import java.lang.annotation.Target;
 @Documented
 @Retention(RUNTIME)
 @Target(FIELD)
-@CustomConstraint(validatedBy = CompareValidator.class)
 /**
  * @author gz
- * 自定义数据一致性验证
+ * 自定义远程数据验证
  */
-public @interface Compare {
+public @interface Remote {
 
-	/**
-	 * 错误提示
-	 * @return
-	 */
-	String message() default "数据不一致";
+	String message() default "账号已注册";
 	
-	/**
-	 * 验证属性名称
-	 * @return
-	 */
-	String verifyField() default "";
+	String validatrUrl() default "";
+	
+	String[] additionalField() default {};
+	
+	String method() default "POST";
 	
 }
