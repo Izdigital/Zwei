@@ -8,6 +8,13 @@
 	</parent>
 	<artifactId>Web</artifactId>
 	<packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>com.Izdigital</groupId>
+			<artifactId>BusinessComponent</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
