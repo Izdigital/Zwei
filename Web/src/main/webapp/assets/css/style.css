@@ -1,0 +1,218 @@
+body a:hover {
+  text-decoration: none; }
+
+.top-bar {
+  height: 32px;
+  line-height: 32px;
+  background-color: #206eb2; }
+  .top-bar a {
+    margin-right: 10px;
+    color: #fff; }
+
+.tag-circle {
+  padding: 1px 5px;
+  background-color: #f8cc2f;
+  border-radius: 50%; }
+
+.bgImageCover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.home-news {
+  padding: 10px; }
+  .home-news .item {
+    padding-bottom: 20px; }
+  .home-news .bgImageCover {
+    width: 100%;
+    height: 120px; }
+  .home-news .intro {
+    line-height: 1.5;
+    text-indent: 2em;
+    overflow: hidden; }
+  @media (min-width: 992px) {
+    .home-news .item .bgImageCover {
+      width: 160px; }
+    .home-news .intro {
+      height: 84px; } }
+
+.bg-left {
+  float: left;
+  margin-right: 20px; }
+
+.bg-right {
+  float: right;
+  margin-left: 20px; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.main-title {
+  padding: 10px; }
+  .main-title .title-text {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px; }
+  .main-title .more-wrapper {
+    display: inline-block; }
+    .main-title .more-wrapper .more {
+      display: inline-block;
+      padding: 0 10px;
+      border: 1px solid #206eb2;
+      border-radius: 2px; }
+
+.tag {
+  display: inline;
+  padding: 0.3em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline; }
+
+.tag-yellow {
+  background-color: #f8cc2f; }
+
+.text-gray {
+  color: #99999d; }
+
+.news-list {
+  margin-bottom: 10px; }
+  .news-list .item-title {
+    display: block;
+    padding: 8px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-bottom: 1px solid #99999d; }
+
+footer {
+  padding: 30px 0;
+  background-color: #6cafe9;
+  color: #fff; }
+  footer a {
+    color: #fff;
+    margin-right: 3%; }
+    footer a:hover {
+      color: #fff; }
+
+.font-bold {
+  font-weight: bold; }
+
+.bg-gray {
+  background-color: #f2f2f3; }
+
+.bg-white {
+  background: #fff; }
+
+.home-resource {
+  padding: 10px; }
+  .home-resource .item {
+    position: relative;
+    margin-bottom: 20px; }
+  .home-resource .bgImageCover {
+    width: 100%;
+    height: 120px; }
+  .home-resource .intro, .home-resource .intro-high, .home-resource .intro-group {
+    line-height: 1.5;
+    text-indent: 2em;
+    overflow: hidden; }
+  .home-resource .tag-top-left {
+    position: absolute; }
+  .home-resource .icon-part {
+    padding-top: 10px; }
+  .home-resource .fa {
+    color: #206eb2;
+    font-size: 16px; }
+  .home-resource span {
+    margin-right: 10px; }
+  .home-resource .expert-group {
+    position: relative;
+    padding-top: 50px; }
+    .home-resource .expert-group img {
+      position: absolute;
+      top: 0;
+      left: 36%;
+      height: 86px;
+      width: 86px;
+      padding: 3px;
+      border-radius: 50%; }
+    .home-resource .expert-group .name {
+      text-align: center;
+      display: inherit; }
+    .home-resource .expert-group .resource-wrap {
+      padding: 40px 20px 10px; }
+  @media (min-width: 992px) {
+    .home-resource .item .bgImageCover {
+      width: 160px; }
+    .home-resource .intro {
+      height: 42px; }
+    .home-resource .intro-high {
+      height: 130px; }
+    .home-resource .intro-group {
+      height: 100px;
+      text-align: left; } }
+
+.intro-wrapper .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 2;
+  display: block; }
+
+.event-resource {
+  position: relative;
+  color: #fff; }
+  .event-resource .item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff; }
+  .event-resource .bgImageCover {
+    width: 100%;
+    height: 120px; }
+  .event-resource .top-event .bgImageCover {
+    width: 100%;
+    height: 300px; }
+  @media (min-width: 992px) {
+    .event-resource .item .bgImageCover {
+      width: 160px; }
+    .event-resource .event-location {
+      height: 50px; } }
+
+.university {
+  text-align: center; }
+  .university h5 {
+    padding-top: 10px; }
+  .university .university-pic {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden; }
+
+.expert-resource {
+  text-align: center; }
+  .expert-resource .name {
+    margin-bottom: 0; }
+
+.expert {
+  position: relative; }
+  .expert .expert-pic {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px; }
+    .expert .expert-pic img {
+      width: 100px;
+      height: 100px; }
+  .expert .tag {
+    position: absolute;
+    bottom: 0;
+    left: 28%; }
+
+/*# sourceMappingURL=style.css.map */
