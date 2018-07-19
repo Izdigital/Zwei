@@ -14,9 +14,9 @@
     http://mybatis.org/schema/mybatis-spring
   	http://mybatis.org/schema/mybatis-spring.xsd">
 
-	<mybatis:scan base-package="com.netease.JavaFinal.dao" />
+	<mybatis:scan base-package="cn.izdigital.zwei.dao" />
 	<tx:annotation-driven transaction-manager="txManager" />
-  	<context:component-scan base-package="cn.izdigital.zwei.web.config" />
+	<context:component-scan base-package="cn.izdigital.zwei.service" />
 	
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>

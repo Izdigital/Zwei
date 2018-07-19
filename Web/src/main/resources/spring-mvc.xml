@@ -18,8 +18,7 @@
 	
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/*" />
-			<mvc:mapping path="/api/*" />
+			<mvc:mapping path="/**" />
 			<bean
 				class="cn.izdigital.zwei.businesscomponent.interceptor.CustomHandlerInterceptorAdapter"></bean>
 		</mvc:interceptor>

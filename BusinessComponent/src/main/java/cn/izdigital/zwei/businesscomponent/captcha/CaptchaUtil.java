@@ -40,11 +40,16 @@ public class CaptchaUtil {
      * 干扰线数量
      */
     private static final int count = 200;
+    
+    /**
+     * 验证码存入session的名称
+     */
+    public static final String SESSION_KEY_OF_CAPTCHA_CODE = "captchaCode";
 	
     /**
      * @return 验证码图片
      */
-	public BufferedImage createImage() {
+	public BufferedImage createImage(String captchaCode) {
 		// 在内存中创建图象
 		final BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		// 获取图形上下文
@@ -66,9 +71,7 @@ public class CaptchaUtil {
             final int yl = random.nextInt(lineWidth);
             graphics.drawLine(x, y, x + xl, y + yl);
         }
-        // 取随机产生的认证码(4位数字)
-        final String resultCode = exctractRandCode();
-        for (int i = 0; i < resultCode.length(); i++) {
+        for (int i = 0; i < captchaCode.length(); i++) {
             // 将认证码显示到图象中,调用函数出来的颜色相同，可能是因为种子太接近，所以只能直接生成
             graphics.setColor(new Color(20 + random.nextInt(130), 20 + random.nextInt(130), 20 + random.nextInt(130)));
             // 设置字体颜色
@@ -76,7 +79,7 @@ public class CaptchaUtil {
             // 设置字体样式
             graphics.setFont(new Font("Times New Roman", Font.BOLD, 24));
             // 设置字符，字符间距，上边距
-            graphics.drawString(String.valueOf(resultCode.charAt(i)), (23 * i) + 8, 26);
+            graphics.drawString(String.valueOf(captchaCode.charAt(i)), (23 * i) + 8, 26);
         }
         // 图象生效
         graphics.dispose();
@@ -84,9 +87,10 @@ public class CaptchaUtil {
 	}
 
 	/**
+	 * 生成随机验证码
 	 * @return 随机码
 	 */
-	private String exctractRandCode() {
+	public String createCaptchaCode() {
 		switch (randCodeType) {
 		case 1:
 			return RandCodeImageEnum.NUMBER_CHAR.generateStr(randCodeLength);

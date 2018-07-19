@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package cn.izdigital.zwei.web.viewmodel;
 
 import javax.validation.constraints.Size;

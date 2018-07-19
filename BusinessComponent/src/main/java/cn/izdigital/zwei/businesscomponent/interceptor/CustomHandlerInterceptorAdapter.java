@@ -24,7 +24,10 @@ public class CustomHandlerInterceptorAdapter extends HandlerInterceptorAdapter {
 			for (Class<?> c : before.value()) {
 				CustomInterceptor interceptor = InterceptorBuilder.INSTANCE.getInterceptors().get(c);
 				if (interceptor != null) {
-					interceptor.invoke(request, response);
+					if(!interceptor.invoke(request, response)) {
+						return false;
+					}
+					
 				}
 			}
 		}
